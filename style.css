@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
 body {
     overflow: hidden;
     margin: 0;
@@ -7,6 +9,7 @@ body {
     flex-direction: column;
     height: 100vh;
     gap:1rem;
+    font-family: 'Lato', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     transition: var(--transition-delay);
