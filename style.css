@@ -30,22 +30,27 @@ body.dark {
 
 
 .theme-toggle-button {
-    width: 60px;
-    height: 45px;
+    width: 100px;
+    height: 50px;
     border-radius: .3em;
     display: flex;
     justify-content: flex-start;
-    transition: var(--transition-delay);
+    transition:all ease-out var(--transition-delay);
     transform: scale(1);
     cursor: pointer;
+    border: 2px solid var(--accent-color);
+    border-radius: 100px;
+}
+
+.ball {
+    width: 50%;
+    height: 100%;
+    background:var(--accent-color);
+    border-radius: 50%;
 }
 
 .theme-toggle-button.dark {
-    background: url('toggle-left.svg') no-repeat;
-    background-position: center;
-    background-size: 80%;
-    background-clip: border-box;
-    cursor: pointer;
+    justify-content: flex-end;
 }
 
 .theme-toggle-button:hover,
