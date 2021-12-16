@@ -5,7 +5,7 @@ const toggleButton = document.querySelector('.theme-toggle-button');
 const audio = document.querySelector('.audio');
 
 
-// setTimeout(customTheme,5000)
+setTimeout(customTheme,5000)
  
  function customTheme() {
         confirm('Did not like our Themes, Want to create your own ?')
