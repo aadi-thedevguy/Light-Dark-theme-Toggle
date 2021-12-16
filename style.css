@@ -28,6 +28,11 @@ body.dark {
 
 }
 
+.audio {
+    pointer-events: none;
+    /* visibility: hidden; */
+}
+
 
 .theme-toggle-button {
     width: 100px;
@@ -36,7 +41,6 @@ body.dark {
     display: flex;
     justify-content: flex-start;
     transition:all ease-out var(--transition-delay);
-    transform: scale(1);
     cursor: pointer;
     border: 2px solid var(--accent-color);
     border-radius: 100px;

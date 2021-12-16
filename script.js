@@ -2,8 +2,10 @@
 const headingText = document.querySelector('h2');
 const sunMoonContainer = document.querySelector('.sun-moon-container');
 const toggleButton = document.querySelector('.theme-toggle-button');
+const audio = document.querySelector('.audio');
 
-setTimeout(customTheme,5000)
+
+// setTimeout(customTheme,5000)
  
  function customTheme() {
         confirm('Did not like our Themes, Want to create your own ?')
@@ -18,10 +20,10 @@ setTimeout(customTheme,5000)
 
 
 
-document.querySelector('.theme-toggle-button').addEventListener('click', () => {
+toggleButton.addEventListener('click', () => {
     document.body.classList.toggle('dark');
     toggleButton.classList.toggle('dark');
-    
+    audio.play()
     const currentRotation = parseInt(getComputedStyle(sunMoonContainer).getPropertyValue('--rotation'))
     sunMoonContainer.style.setProperty('--rotation',currentRotation + 180);
 })
