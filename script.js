@@ -3,22 +3,32 @@ const headingText = document.querySelector('h2');
 const sunMoonContainer = document.querySelector('.sun-moon-container');
 const toggleButton = document.querySelector('.theme-toggle-button');
 const audio = document.querySelector('.audio');
+const modal = document.getElementById('modal')
+const btn = document.getElementById('btn')
+const open = document.getElementById('open')
 
+const themes = document.querySelectorAll('.color-box span');
 
-setTimeout(customTheme,5000)
+themes.forEach(theme => {
+       theme.addEventListener('click', () => {
+             let bgColor = getComputedStyle(theme).getPropertyValue("background-color")
+             let color = getComputedStyle(theme).getPropertyValue("color")
+             
+             customTheme(bgColor,color)
+             audio.play()
+             modal.close()
+       })
+})
  
- function customTheme() {
-        confirm('Did not like our Themes, Want to create your own ?')
-        let color = prompt('Just Type the Color you want','skyblue, gray, crimson')
-
-        if (color === null) return
-        document.body.style.backgroundColor = color
+ function customTheme(bgColor,textColor) {
+        document.body.style.backgroundColor = bgColor
+        document.body.style.color = textColor
+        sunMoonContainer.style.display = 'none'
         toggleButton.style.display = 'none'
-        headingText.innerHTML = `<span style="color:white;">Custom Theme is active now</span>`
-        
+           
  }
-
-
+        open.onclick = () => modal.showModal()
+        btn.onclick = () => modal.close()
 
 toggleButton.addEventListener('click', () => {
     document.body.classList.toggle('dark');
